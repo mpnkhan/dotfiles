@@ -20,6 +20,22 @@ alias cg='git checkout gh-pages'
 alias s='git status'
 alias w='git config user.email'
 
+#eclipse_poject_import_into_androidstudio
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:~/drivers:/Users/pkhan/Desktop/Nawaz/mongodb/bin
+
+#JAVA
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+#NVM for nodeJS
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#NVM for nodeJS yarn build
+export PATH="$HOME/.yarn/bin:$PATH"
+
+
 function parse_git_dirty() {
    git diff --quiet --ignore-submodules HEAD 2>/dev/null; [ $? -eq 1 ] && echo '*'
 }
