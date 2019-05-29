@@ -49,6 +49,8 @@ function gitpub(){
 	cp ~/.ssh.pub/* ~/.ssh/
 	git config --global user.email "mpnkhan@gmail.com"
 	git config user.email
+        npm config set registry https://registry.npmjs.org/
+        npm config get registry	
 }
 
 function gitpp(){
@@ -56,4 +58,7 @@ function gitpp(){
 	cp ~/.ssh.pp/* ~/.ssh/
 	git config --global user.email "pkhan@paypal.com"
 	git config user.email
+        npm config set registry http://npm.paypal.com/
+        npm config get registry
+        npm config set package-lock false	
 }
